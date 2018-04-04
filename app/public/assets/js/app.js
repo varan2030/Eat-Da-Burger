@@ -149,17 +149,6 @@ function displayResult() {
         onclick1 = "onclick";
       };
 
-      var priorityClass = "high-status" ;
-
-      if (data[i].priority == "High"){
-         priorityClass = "high-status";
-      }else if(data[i].priority == "Medium"){
-         priorityClass = "medium-status";
-      }else{
-         priorityClass = "low-status";
-      }
-
-
       $("#tasks-list").append(`
 
             <div class="task ${progressClass} text-center row" data-toggle="modal" data-target="#myModal1" data-toggle="tooltip" data-placement="bottom" title="Description: ${data[i].description}" ${onclick1}="updateModal(${data[i].id}, ${progress})">
@@ -180,7 +169,7 @@ function displayResult() {
             <div class="col-2 ">
             ${deadline}
             </div>
-            <div class="${priorityClass} col-1">
+            <div class="col-1">
             ${data[i].priority}
             </div>
         </div>

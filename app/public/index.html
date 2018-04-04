@@ -7,32 +7,92 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="\Users\almaz\Desktop\My course\Bootcamp\March\Eat-Da-Burger\app\public\assets\css\custom.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css">
     <title>Tasks Log</title>
   </head>
   <body>
 
 
-    <div class="jumbotron">
-      <h1 class="display-4 text-center">ToDo!</h1>
-        <button class="btn btn-primary btn-lg" id="addTask" role="button">Add task!</button>
-    </div>
-
-
-    <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-    </div>
-
-  </div>
     
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <div>
+          <div class="jumbotron" id="first-jumbo">
+            
+                  
+                <h1>Task Manager!</h1>
+              <p></p>
+              <p><a class="btn btn-default pill large red navbar-toggle collapsed" role="button" data-toggle="modal" data-toggle="collapse" data-target="#myModal" class="" id="openmodalbutton">Add Task</a></p>
+                
+          </div>
+          <nav class="navbar navbar-default navbar-fixed-top">
+  
+      </nav>
+      </div>
+      <div class="container">
+         <div id="tasks-list">
+        </div>
+         </div>
+         <div id="modal1">
+        
+         
+
+          
+        </div>
+        <!-- Modal Content -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+        
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Task</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <form>
+                   <div class="form-group text-center">
+                      <label for="inputAddress">Task title</label>
+                      <input type="text" class="form-control" id="projectTitle" placeholder="Project title">
+                    </div>
+                    <div class="form-group text-center">
+                      <label for="inputAddress">Responsible</label>
+                      <input type="text" class="form-control" id="responsible" placeholder="Responsible">
+                    </div>
+                   <div class="form-row">
+                      <div class="form-group col-md-7">
+                          <label for="inputDeadline">Deadline</label>
+                          <div class="form-group">
+                              <input type="datetime-local" class="form-control input" id="deadline"/>
+                        </div>
+                        </div>
+                      <div class="form-group col-md-5">
+                        <label for="inputPriority">Priority</label>
+                        <select id="priority" class="form-control">
+                          <option selected>High</option>
+                          <option>Medium</option>
+                          <option>Low</option>
+                        </select>
+                      </div>
+                      </div>
+                   <div class="form-group text-center">
+                      <label for="comment">Description</label>
+                      <textarea class="form-control" rows="10" id="description"></textarea>
+                    </div>
+                    <button type="submit" id="submit1" class="btn btn-primary">Submit</button>
+                  </form>
+                <div class="text-center modal-footer">
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="\Users\almaz\Desktop\My course\Bootcamp\March\Eat-Da-Burger\app\public\assets\js\app.js"></script>
+    
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>
